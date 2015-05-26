@@ -79,7 +79,7 @@ git grep keyboard
 ## Searching through the log
 
 ```sh
-git log -S keyboard
+git log -p -S keyboard
 ```
 
 ![inline](./search_log.png)
