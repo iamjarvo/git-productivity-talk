@@ -32,7 +32,7 @@ git commit -v
 
 ```sh
 git commit --amend --no-edit
-```sh
+```
 
 ---
 
