@@ -2,7 +2,7 @@
 
 ---
 
-## Checking out previous branch
+## Checkout previous branch
 
 ```sh
 git checkout -
@@ -12,7 +12,7 @@ git checkout -
 
 ---
 
-## Show diff of what is being committed
+## Show diff while writing commit message
 
 ```sh
 git commit -v
@@ -26,7 +26,12 @@ git commit -v
 git add . -p
 ```
 
--p only operates on tracked files. To operate on untracked files use -N to add the filepath and not the contents then use -p
+<sub>-p operates on tracked files. To track a file and not add the contents use -N</sub>
+
+```sh
+git add . -N spec/spec_helper.rb
+git add -p spec/spec_helper.rb
+```
 
 ---
 
@@ -41,7 +46,7 @@ git clean -df
 ## Diff 2 objects
 
 git diff sha1..sha2
-git diff branch1..branch2 (use 3 dots to diff from the common parent)
+git diff branch1..branch2 <sub>(use 3 dots to diff from the common parent)</sub>
 
 ---
 
@@ -53,7 +58,7 @@ git diff --cached
 
 ---
 
-## Resetting a commit without losing the change
+## Undo last commit without losing change
 
 ```sh
 git reset --soft HEAD~1
@@ -64,16 +69,20 @@ git reset --soft HEAD~1
 ## Searching a repo
 
 ```sh
-git grep foo
+git grep keyboard
 ```
+
+![inline](./git_grep.png)
 
 ---
 
-## Searching through logs
+## Searching through the log
 
 ```sh
-git log -S foo
+git log -S keyboard
 ```
+
+![inline](./search_log.png)
 
 ---
 
@@ -94,7 +103,7 @@ git config --global help.autocorrect 10
 git push origin :branchname
 ```
 
-### 1.7.0 >
+### >= 1.7.0
 ```sh
 git push origin --delete branchname
 ```
@@ -108,6 +117,8 @@ git push origin --delete branchname
 ```sh
 git checkout $(git branch | pick)
 ```
+
+![inline](./pick.png)
 
 ^ The pick(1) utility allows users to choose one option from a set of choices using an interface with fuzzy search functionality.
 
@@ -135,8 +146,12 @@ git browse --issues
 ## Subway map
 
 ```sh
-git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold cyan)<%an>%Creset' --abbrev-commit --date=relative
+git log --graph \
+--pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold cyan)<%an>%Creset'\
+--abbrev-commit --date=relative
 ```
+
+![inline](./git_graph.png)
 
 ---
 
