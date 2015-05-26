@@ -42,7 +42,7 @@ git commit --amend --no-edit
 git add -p
 ```
 
-<sub>-p operates on tracked files. To track a file and not add the contents use -N</sub>
+-p operates on tracked files. To track a file and not add the contents use -N
 
 ```sh
 git add . -N spec/spec_helper.rb
