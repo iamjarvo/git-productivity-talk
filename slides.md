@@ -23,7 +23,7 @@ git commit -v
 ## Interactively add changes
 
 ```sh
-git add . -p
+git add -p
 ```
 
 <sub>-p operates on tracked files. To track a file and not add the contents use -N</sub>
