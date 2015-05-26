@@ -2,6 +2,14 @@
 
 ---
 
+## yolo
+
+```sh
+alias yolo="git push origin HEAD -f --no-verify"
+```
+
+---
+
 ## Checkout previous branch
 
 ```sh
