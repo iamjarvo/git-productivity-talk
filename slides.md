@@ -145,7 +145,7 @@ git checkout $(git branch | pick)
 [hub](https://github.com/github/hub)
 
 * install hub
-* alias hub to git
+* alias git to hub
 
 ---
 
