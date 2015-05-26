@@ -26,6 +26,8 @@ git checkout -
 git commit -v
 ```
 
+![inline](./verbose_commit.png)
+
 ---
 
 ## Amend commit with last message
