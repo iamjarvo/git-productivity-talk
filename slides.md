@@ -28,6 +28,14 @@ git commit -v
 
 ---
 
+## Ammend commit with last message
+
+```sh
+git commit --amend --no-edit
+```sh
+
+---
+
 ## Interactively add changes
 
 ```sh
